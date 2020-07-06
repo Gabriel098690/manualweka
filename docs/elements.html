@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Arquivo ARFF</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+		
+		<header id="header">
+			<div class="inner">
+				<a href="index.html" class="logo">Arquivo ARFF</a>
+				<nav id="nav">
+					<a href="index.html">Home</a>
+					<a href="generic.html">Instalação</a>
+					<a href="elements.html">Arquivo ARFF</a>
+					<a href="ferramentaj48.html">Árvore de decisão</a>
+				</nav>
+			</div>
+		</header>
+		<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+	
+		<section id="main">
+			<div class="inner">
+				<header class="major special">
+					<center>
+					<h1>Geração de Arquivo ARFF</h1>
+					<p>Suponhamos que tenhamos alguns dados para gerar regras de associação ou para classificar.
+						Estes dados por sua vez, podem estar armazenados na forma de uma planilha ou de um banco de dados.
+						Como fazer para utilizar estes dados no Weka?
+						O Weka possui um formato próprio, o ARFF, o qual temos que descrever o domínio do atributo,
+						pois o mesmo não pode ser obtido automaticamente pelo seu valor. Antes de aplicar os dados a qualquer
+						algoritmo do pacote Weka estes devem ser convertidos para o formato ARFF que consiste basicamente de
+						duas partes:
+						 A primeira contém uma lista de todos os atributos, onde devemos definir o tipo do
+						atributo ou os valores que ele pode representar. Quando utilizamos os valores estes
+						devem estar entre “{ }“ separados por vírgulas.
+						 A segunda parte consiste das instâncias, ou seja, os registros a serem minerados com o
+						valor dos atributos para cada instancia separado por vírgula. A ausência de um item em
+						um registro deve ser atribuída pelo símbolo “?”.
+						A geração de um arquivo a partir de planilhas eletrônicas ou banco de dados é possível através
+						da exportação de dados para arquivos CSV. Uma vez feito isso, é necessário apenas carregar o arquivo em
+						um editor de texto e adicionar o nome do conjunto de dados usando os descritores do arquivo e dos atributos
+						conforme a regra:
+						@relation nome_do_conjuto_de_dados;
+						@attribute nome do atributo seguido do seu tipo;
+						@data e logo em seguida os dados em si.
+						Em seguida deve-se salvar o arquivo como texto puro com extensão ARFF.</p>
+				</header>
+				<center>
+				<img src="images/12 w.png" width="400" height="400" />
+				<p>
+					No exemplo a seguir, temos os dados armazenados em uma planilha do Microsoft Excel. Para
+					salvar em modo texto no exemplo utilizou-se o editor Microsoft Word. Podemos utilizar outros programas
+					para converter os dados para o formato ARFF. A Figura 1 mostra uma planilha do Microsoft Excel
+					contendo os dados atmosféricos.
+					Para gerarmos um arquivo onde os dados serão separados por vírgula devemos clicar menu usar
+					a opção Salvar como. Na caixa de diálogo Salvar como tipo selecionar a opção CSV (separado por vírgulas)
+					digitamos o nome do arquivo e clicamos no botão Salvar, a mensagem que vem a seguir (arquivo.csv pode
+					conter recursos que não sejam compatíveis com CSV (separado por virgula). Deseja manter a pasta neste
+					formato?) clique em Sim.
+				</p>
+				
+				
+				  
+				<img src="images/13 w.png" width="400" height="400" />
+			    
+				<p>
+					Em seguida, abrir o arquivo com o Microsoft Word, onde a primeira linha representa o
+					cabeçalho das colunas, ou seja, o nome dos atributos sendo separados por vírgula como mostrado na Figura
+					2. As linhas seguintes representam os registros onde cada atributo do registro está separado por virgula.
+					Devemos acrescentar o cabeçalho do arquivo ARFF como mostrado na Figura 3. Temos então
+					na primeira linha o nome do conjunto de dados atribuído pelo comando @relation
+					nome_do_conjuto_de_dados, em seguida temos a relação dos atributos, onde colocamos o nome do atributo
+					e tipo ou seus possíveis valores, definido por @attribute nome_do_atributo tipo ou {valores}, na seção dos
+					dados colocamos o comando @data e nas próximas linhas colocamos os registros onde cada linha
+					representa um registro.
+					O passo seguinte é gravar o arquivo, para isso selecionamos no menu Arquivo a opção Salvar
+					como... no menu Salvar como tipo selecione a opção Somente texto com quebra de linha, em Nome do
+					arquivo digite o nome do arquivo com a extensão arff
+				</p>
+                <img src="images/14 w.png" width="400" height="500" />
+</body>
+</html
